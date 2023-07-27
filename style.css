@@ -143,7 +143,7 @@ button{
 
 
 svg,img{
-    width: 70%;
+    width: 100%;
 }
 
 .header-logo{
@@ -288,13 +288,99 @@ svg,img{
 
     .about img{
     min-width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     }
 
     .about-content{
         flex-direction: column;
+    }
+    
+}
+
+/* SERVICES */
+
+.services{
+    background-color: var(--white-normal);
+    color: var(--black-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p{
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.gym{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.gym img{
+    width: 100%;
+    max-width: 354px;
+    transition: transform 0.4s;
+}
+
+.gym img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.bodybuilding, .crossfit, .pilates{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-normal);
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.bodybuilding-info, .crossfit-info, .pilates-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: var(--white-normal);
+    z-index: 2;
+}
+
+.gym button{
+    color: var(--white-normal);
+    background-color: var(--red-normal);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+
+@media screen and (max-width: 600px) {
+
+    .gym{
+        flex-direction: column;
+    }
+    .bodybuilding-info, .crossfit-info, .pilates-info{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px;
+        background-color: var(--white-normal);
+        z-index: 2;
     }
     
 }
