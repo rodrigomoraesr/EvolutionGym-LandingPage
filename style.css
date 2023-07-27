@@ -369,7 +369,7 @@ svg,img{
     cursor: default;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     .gym{
         flex-direction: column;
@@ -381,6 +381,72 @@ svg,img{
         padding: 14px;
         background-color: var(--white-normal);
         z-index: 2;
+    }
+    
+}
+
+/* FOOTER */
+
+.footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: var(--white-normal);
+}
+
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: var(--white-normal);
+}
+
+/* Button Whatsapp */
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 3;
+}
+
+.btn-whatsapp img{
+    max-width: 74px;  
+    transition: transform 0.4s;
+}
+
+.btn-whatsapp img:hover{
+    transform: scale(1.1); 
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    background-color: var(--primary-normal);
+    color: var(--white-normal);
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    .btn-whatsapp img{
+        max-width: 64px;  
     }
     
 }
